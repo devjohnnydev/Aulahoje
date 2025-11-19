@@ -1,0 +1,166 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo geral */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a; /* azul bem escuro */
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* Topo / Header do professor */
+.topo-prof {
+  background: radial-gradient(circle at top left, #ef4444, #0f172a 55%);
+  padding: 40px 20px 50px;
+  color: #f9fafb;
+}
+
+.topo-conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.topo-prof h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.topo-prof p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(248, 250, 252, 0.4);
+}
+
+/* Container principal */
+.container {
+  max-width: 960px;
+  margin: -20px auto 40px; /* sobe um pouco sobre o header */
+  padding: 0 20px 40px;
+}
+
+/* Seção de introdução */
+.intro {
+  background: #020617;
+  padding: 20px 20px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+  margin-bottom: 28px;
+}
+
+.intro h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #f9fafb;
+}
+
+.intro p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+/* Grid dos alunos */
+.grid-alunos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+/* Card de cada aluno */
+.card-aluno {
+  background: #020617;
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card-aluno:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+  border-color: #f97316;
+}
+
+.card-aluno h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.descricao-aluno {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  opacity: 0.85;
+}
+
+/* Botão para página do aluno */
+.btn-perfil {
+  margin-top: 8px;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f97316, #ef4444);
+  color: #0b1120;
+  box-shadow: 0 8px 20px rgba(248, 113, 113, 0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.btn-perfil:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(248, 113, 113, 0.55);
+  filter: brightness(1.05);
+}
+
+.btn-perfil:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(15, 23, 42, 0.9);
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 14px 10px 18px;
+  border-top: 1px solid rgba(51, 65, 85, 0.8);
+  color: #9ca3af;
+  background: #020617;
+}
+
+/* Responsivo: 2 ou 3 colunas em telas maiores */
+@media (min-width: 640px) {
+  .grid-alunos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .grid-alunos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
